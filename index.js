@@ -13,17 +13,17 @@ function setup() {
   const difficultySettings = {
     easy: {
       pairs: 3,
-      totalTime: 100,
+      totalTime: 25,
       columns: 3
     },
     medium: {
       pairs: 6,
-      totalTime: 200,
+      totalTime: 50,
       columns: 4
     },
     hard: {
       pairs: 12,
-      totalTime: 300,
+      totalTime: 75,
       columns: 6
     }
   }
@@ -90,7 +90,7 @@ function setup() {
       usedIds.push(randomId)
 
       let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`)
-      let data = await response.json()
+      let data = await response.json() //convert to json
 
       let image = data.sprites.other["official-artwork"].front_default
 
